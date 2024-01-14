@@ -25,5 +25,17 @@ class LoginController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+   @IBAction  func onClickLoginButton(){
+       let alertController = UIAlertController(title: "Click Event", message: "Login Button Clicked", preferredStyle: .alert)
+      
+       let closeAction = UIAlertAction(title: "Close", style: .cancel)
+       
+       alertController.addAction(closeAction)
+       
+       self.present(alertController, animated: true)
+        
+    }
 
 }

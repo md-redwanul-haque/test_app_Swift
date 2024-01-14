@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+class Constants {
+    
+    public static let loginController  = "LoginController"
+    
+    
+    
+    
+    
+    
+}
