@@ -22,6 +22,7 @@ class SplashController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        print("Test1")
         
     }
 
