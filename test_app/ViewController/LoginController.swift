@@ -9,10 +9,21 @@ import UIKit
 
 class LoginController: UIViewController {
 
+    @IBOutlet weak var logoImageView : UIImageView!
+    
+    @IBOutlet weak var  userNameField : UITextField!
+    @IBOutlet weak var  passWordField : UITextField!
+    @IBOutlet weak var  loginButton : UIButton!
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        super.viewDidLoad()
+        
+        self.logoImageView.applyCorner(cornerRadious: 20, borWidth: 3)
+        
+     
+        
+      
     }
     
 
