@@ -21,32 +21,84 @@ class LoginController: UIViewController {
         
         self.logoImageView.applyCorner(cornerRadious: 20, borWidth: 3)
         
-     
+        self.title = "Login"
         
       
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     
    @IBAction  func onClickLoginButton(){
-       let alertController = UIAlertController(title: "Click Event", message: "Login Button Clicked", preferredStyle: .alert)
-      
-       let closeAction = UIAlertAction(title: "Close", style: .cancel)
+//       let alertController = UIAlertController(title: "Click Event", message: "Login Button Clicked", preferredStyle: .alert)
+//      
+//       let closeAction = UIAlertAction(title: "Close", style: .cancel)
+//       
+//       alertController.addAction(closeAction)
+//       
+//       self.present(alertController, animated: true)
+//
        
-       alertController.addAction(closeAction)
        
-       self.present(alertController, animated: true)
+       
+       self.Login()
+       
+       if let currentwindowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene{
+           
+        // Scene gelegate
+           
+           if let sceneDelegate  = currentwindowScene.delegate as? SceneDelegate ,let window = sceneDelegate.window {
+                              
+               if let tabContrl  = self.storyboard?.instantiateViewController(withIdentifier: Constants.tabController ) as? UITabBarController{
+                   
+                   window.rootViewController = tabContrl
+               }
+               
+               
+               
+               
+               
+           }
+           
+       }
+       
+       
+       
+       
+       
+       
+    }
+    
+    
+    func Login (){
+        
+        
         
     }
+    
+    
+    
+    @IBAction  func onCLickSignUpButton(){
+       if  let signUpController = self.storyboard?.instantiateViewController(withIdentifier: Constants.signUpController) as? SignUpController{
+           
+           signUpController.value = 20
+           
+            self.navigationController?.pushViewController(signUpController, animated: true)
+            
+        }
+        
+     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let signupCtrl = segue.destination as? SignUpController{
+            
+            signupCtrl.value = 50
+            
+        }
+    }
+    
+    
+    
+    
+    
+    
 
 }

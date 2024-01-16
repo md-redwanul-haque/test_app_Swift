@@ -38,11 +38,20 @@ class SplashController: UIViewController {
             
             if let sceneDelegate  = currentwindowScene.delegate as? SceneDelegate ,let window = sceneDelegate.window {
                 
-                if let loginViewController  = self.storyboard?.instantiateViewController(withIdentifier: Constants.loginController ) as? LoginController{
+//                if let loginViewController  = self.storyboard?.instantiateViewController(withIdentifier: Constants.loginController ) as? LoginController{
+//                    
+//                    window.rootViewController = loginViewController
+//                }
+                
+                if let authViewController  = self.storyboard?.instantiateViewController(withIdentifier: Constants.authNavigationController ) as? UINavigationController{
                     
-                    window.rootViewController = loginViewController
-                    
+                    window.rootViewController = authViewController
                 }
+                
+                
+                
+                
+                
             }
             
         }

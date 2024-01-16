@@ -8,11 +8,15 @@
 import UIKit
 
 class SignUpController: UIViewController {
+    
+    var value : Int!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Create An Account"
+        print("get Val \(value)")
 
         // Do any additional setup after loading the view.
     }
