@@ -14,6 +14,7 @@ class Constants {
     
     public static let signUpController = "SignUpController"
     public static let tabController  = "TabController"
+    public static let profileController  = "ProfileController"
     
     
     

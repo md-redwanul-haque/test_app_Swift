@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8C667DDF2B564DC20014F74C /* ProductsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C667DDE2B564DC20014F74C /* ProductsController.swift */; };
+		8C667DE12B567CAA0014F74C /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C667DE02B567CAA0014F74C /* ProfileController.swift */; };
 		8C91552F2B53DF700078EBE3 /* UIVIewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C91552E2B53DF6F0078EBE3 /* UIVIewExtension.swift */; };
 		8CE0ABCD2B529544005485C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0ABCC2B529544005485C6 /* Constants.swift */; };
 		8CE0ABCF2B52A600005485C6 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0ABCE2B52A600005485C6 /* LoginController.swift */; };
@@ -30,6 +31,7 @@
 		12A874BD553D5BC5F8B2E3F8 /* Pods-test_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test_app.debug.xcconfig"; path = "Target Support Files/Pods-test_app/Pods-test_app.debug.xcconfig"; sourceTree = "<group>"; };
 		42869B70EBE42F0CCCF59091 /* libPods-test_app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test_app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C667DDE2B564DC20014F74C /* ProductsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsController.swift; sourceTree = "<group>"; };
+		8C667DE02B567CAA0014F74C /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		8C91552E2B53DF6F0078EBE3 /* UIVIewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVIewExtension.swift; sourceTree = "<group>"; };
 		8CE0ABCC2B529544005485C6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8CE0ABCE2B52A600005485C6 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				8CF218F82B55490A009E1B1A /* OrderController.swift */,
 				8CF218FA2B554953009E1B1A /* SettingsController.swift */,
 				8C667DDE2B564DC20014F74C /* ProductsController.swift */,
+				8C667DE02B567CAA0014F74C /* ProfileController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				8CEAFA5F2B4E49C8005C0E85 /* SplashController.swift in Sources */,
 				8CEAFA5B2B4E49C8005C0E85 /* AppDelegate.swift in Sources */,
 				8CEAFA5D2B4E49C8005C0E85 /* SceneDelegate.swift in Sources */,
+				8C667DE12B567CAA0014F74C /* ProfileController.swift in Sources */,
 				8CF218FB2B554953009E1B1A /* SettingsController.swift in Sources */,
 				8CF218F52B554896009E1B1A /* CategoryController.swift in Sources */,
 				8CF218F92B55490A009E1B1A /* OrderController.swift in Sources */,
