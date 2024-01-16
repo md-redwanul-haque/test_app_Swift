@@ -12,7 +12,7 @@ class CategoryController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title ="Browse Product"
+        self.navigationItem.title = "Browse Product"
 
         // Do any additional setup after loading the view.
     }

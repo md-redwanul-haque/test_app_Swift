@@ -13,7 +13,7 @@ class OrderController: UIViewController {
         super.viewDidLoad()
         
         
-        self.title = "Product Order"
+        self.title = "My Order"
 
         // Do any additional setup after loading the view.
     }
