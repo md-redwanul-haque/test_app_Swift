@@ -33,6 +33,8 @@ class SearchController: UIViewController {
         self.title = "Search Products"
         self.mTableView.dataSource = self
         self.mTableView.delegate = self 
+        
+        self.mTableView.register(UINib(nibName: cellIdentifier.searchCell, bundle: nil), forCellReuseIdentifier: cellIdentifier.searchCell)
 
         // Do any additional setup after loading the view.
     }
@@ -45,31 +47,63 @@ extension SearchController: UITableViewDataSource, UITableViewDelegate {
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1 
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.products.count
     }
     
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        
+//        var cell: UITableViewCell!
+//        if let mcell = tableView.dequeueReusableCell(withIdentifier: "Cell") as?
+//            UITableViewCell {
+//            cell = mcell
+//            
+//        }else{
+//            cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
+//        }
+//        
+//        cell.accessoryType = .disclosureIndicator
+//        cell.textLabel?.text = products[indexPath.row].name
+//        return cell
+//        
+//        
+//    }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell: UITableViewCell!
-        if let mcell = tableView.dequeueReusableCell(withIdentifier: "Cell") as?
-            UITableViewCell {
+        var cell: SearchCell!
+        if let mcell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier.searchCell) as?
+            SearchCell {
             cell = mcell
             
         }else{
-            cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
+            cell = Bundle.main.loadNibNamed(cellIdentifier.searchCell, owner: nil)?.first as! SearchCell
         }
         
-        cell.accessoryType = .disclosureIndicator
-        cell.textLabel?.text = products[indexPath.row].name
+        //cell.accessoryType = .disclosureIndicator
+        
+        let product = self.products[indexPath.row]
+        cell.nameLabel?.text = product.name
+        cell.descriptionLabel?.text = product.description
+        
+        if product.inStock {
+            
+            cell.stockLabel.text = "In Stock"
+            cell.stockLabel.textColor = UIColor.green
+        }else{
+            
+            cell.stockLabel.text = "Out Of Stock"
+            cell.stockLabel.textColor = UIColor.gray
+            
+        }
+        
         return cell
         
         
     }
-    
     
     
 }

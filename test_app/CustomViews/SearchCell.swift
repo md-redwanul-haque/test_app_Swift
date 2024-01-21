@@ -8,6 +8,11 @@
 import UIKit
 
 class SearchCell: UITableViewCell {
+    
+    @IBOutlet weak var descriptionLabel : UILabel!
+    @IBOutlet weak var nameLabel : UILabel!
+    @IBOutlet weak var stockLabel : UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

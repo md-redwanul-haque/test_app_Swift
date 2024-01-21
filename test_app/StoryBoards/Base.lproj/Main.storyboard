@@ -492,24 +492,44 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbV-GI-212">
+                                <rect key="frame" x="20" y="234.33333333333334" width="353" height="27.333333333333343"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eh-h1-aI0">
+                                <rect key="frame" x="20" y="271.66666666666669" width="353" height="27.333333333333314"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OjL-7u-evf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="OjL-7u-evf" firstAttribute="trailing" secondItem="7eh-h1-aI0" secondAttribute="trailing" constant="20" id="6d4-U1-znM"/>
                             <constraint firstItem="w6X-gJ-vPw" firstAttribute="top" secondItem="OjL-7u-evf" secondAttribute="top" constant="20" id="7qB-ZK-VMg"/>
+                            <constraint firstItem="OjL-7u-evf" firstAttribute="trailing" secondItem="AbV-GI-212" secondAttribute="trailing" constant="20" id="93E-Wb-m1L"/>
                             <constraint firstItem="YJa-id-9K8" firstAttribute="leading" secondItem="w6X-gJ-vPw" secondAttribute="trailing" constant="20" id="9Ae-gZ-tuj"/>
                             <constraint firstItem="gsn-Q5-QzF" firstAttribute="centerY" secondItem="92n-Tv-YAs" secondAttribute="centerY" id="GQm-1k-KrF"/>
                             <constraint firstItem="OjL-7u-evf" firstAttribute="trailing" secondItem="92n-Tv-YAs" secondAttribute="trailing" constant="20" id="HSw-CT-4Jo"/>
+                            <constraint firstItem="7eh-h1-aI0" firstAttribute="top" secondItem="AbV-GI-212" secondAttribute="bottom" constant="10" id="Ptb-s5-iir"/>
                             <constraint firstItem="gsn-Q5-QzF" firstAttribute="leading" secondItem="OjL-7u-evf" secondAttribute="leading" constant="20" id="T1U-sv-pGs"/>
                             <constraint firstItem="92n-Tv-YAs" firstAttribute="leading" secondItem="gsn-Q5-QzF" secondAttribute="trailing" constant="20" id="UGk-dM-kcw"/>
+                            <constraint firstItem="AbV-GI-212" firstAttribute="top" secondItem="gsn-Q5-QzF" secondAttribute="bottom" constant="30" id="YS2-c7-i13"/>
                             <constraint firstItem="OjL-7u-evf" firstAttribute="trailing" secondItem="YJa-id-9K8" secondAttribute="trailing" constant="20" id="bmd-ji-hPP"/>
                             <constraint firstItem="YJa-id-9K8" firstAttribute="top" secondItem="OjL-7u-evf" secondAttribute="top" constant="20" id="cfx-uL-jCw"/>
                             <constraint firstItem="92n-Tv-YAs" firstAttribute="top" secondItem="YJa-id-9K8" secondAttribute="bottom" constant="30" id="eue-4K-3hI"/>
                             <constraint firstItem="YJa-id-9K8" firstAttribute="leading" secondItem="w6X-gJ-vPw" secondAttribute="trailing" constant="20" id="kZl-mf-Y4s"/>
+                            <constraint firstItem="7eh-h1-aI0" firstAttribute="leading" secondItem="OjL-7u-evf" secondAttribute="leading" constant="20" id="rie-cI-bpJ"/>
                             <constraint firstItem="w6X-gJ-vPw" firstAttribute="leading" secondItem="OjL-7u-evf" secondAttribute="leading" constant="20" id="sPl-5v-vtk"/>
+                            <constraint firstItem="AbV-GI-212" firstAttribute="leading" secondItem="OjL-7u-evf" secondAttribute="leading" constant="20" id="xZw-jQ-82c"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bioLabel" destination="7eh-h1-aI0" id="zlJ-Je-CGu"/>
+                        <outlet property="nameLabel" destination="AbV-GI-212" id="tnU-1J-1rO"/>
                         <outlet property="notifyLabel" destination="gsn-Q5-QzF" id="Mka-Hc-pXb"/>
                         <outlet property="notifySwitch" destination="92n-Tv-YAs" id="tbe-Kp-uyD"/>
                         <outlet property="profileImage" destination="w6X-gJ-vPw" id="eaC-Dp-x2b"/>
@@ -601,10 +621,10 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemCyanColor">
-            <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
