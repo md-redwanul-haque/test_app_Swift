@@ -16,11 +16,11 @@ class SearchController: UIViewController {
     
     let products : [Product] = [
         
-        Product(id: 001, name: "Pro_1", description: "Pro_Des_1", inStock: true),
-        Product(id: 002, name: "Pro_2", description: "Pro_Des_2", inStock: true),
-        Product(id: 003, name: "Pro_3", description: "Pro_Des_3", inStock: true),
-        Product(id: 004, name: "Pro_4", description: "Pro_Des_4", inStock: true),
-        Product(id: 005, name: "Pro_5", description: "Pro_Des_5", inStock: true),
+        Product(id: 001, name: "Cricket Bat", description: "High Quality Cricket Bat", inStock: false),
+        Product(id: 002, name: "FootBall", description: "High Quality FootBall", inStock: true),
+        Product(id: 003, name: "Tennis Ball", description: "High  Quality Tennis Ball", inStock: true),
+        Product(id: 004, name: "Hockey Stick", description: "High Quality Hockey  Stick", inStock: true),
+        Product(id: 005, name: "Adidas Shoe", description: "High Quality Shoe", inStock: false),
         
     
     ]
@@ -35,6 +35,10 @@ class SearchController: UIViewController {
         self.mTableView.delegate = self 
         
         self.mTableView.register(UINib(nibName: cellIdentifier.searchCell, bundle: nil), forCellReuseIdentifier: cellIdentifier.searchCell)
+        
+        
+        self.mTableView.estimatedRowHeight = 90.0
+        self.mTableView.rowHeight = UITableView.automaticDimension
 
         // Do any additional setup after loading the view.
     }
@@ -53,6 +57,16 @@ extension SearchController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.products.count
     }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 90.0
+//    }
+//    
+    
+    
+    
+    
+    
     
 //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        
