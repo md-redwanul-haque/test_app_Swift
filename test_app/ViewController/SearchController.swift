@@ -86,6 +86,8 @@ extension SearchController: UITableViewDataSource, UITableViewDelegate {
 //        
 //    }
 
+
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         var cell: SearchCell!
@@ -120,6 +122,8 @@ extension SearchController: UITableViewDataSource, UITableViewDelegate {
         cell.productImage.tintColor = .brown
         
         return cell
+        
+        
         
         
     }
