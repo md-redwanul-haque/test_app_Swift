@@ -11,6 +11,7 @@ class SearchCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel : UILabel!
     @IBOutlet weak var nameLabel : UILabel!
     @IBOutlet weak var stockLabel : UILabel!
+    @IBOutlet weak var productImage : UIImageView!
     
 
     override func awakeFromNib() {

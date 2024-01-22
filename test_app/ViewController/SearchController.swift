@@ -16,11 +16,11 @@ class SearchController: UIViewController {
     
     let products : [Product] = [
         
-        Product(id: 001, name: "Cricket Bat", description: "High Quality Cricket Bat", inStock: false),
+        Product(id: 001, name: "Cricket Bat", description: "High Quality Cricket Bat Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", inStock: false),
         Product(id: 002, name: "FootBall", description: "High Quality FootBall", inStock: true),
         Product(id: 003, name: "Tennis Ball", description: "High  Quality Tennis Ball", inStock: true),
-        Product(id: 004, name: "Hockey Stick", description: "High Quality Hockey  Stick", inStock: true),
-        Product(id: 005, name: "Adidas Shoe", description: "High Quality Shoe", inStock: false),
+        Product(id: 004, name: "Hockey Stick", description: "High Quality Hockey  StickLorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", inStock: true),
+        Product(id: 005, name: "Adidas Shoe", description: "High Quality Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Shoe", inStock: false),
         
     
     ]
@@ -37,8 +37,8 @@ class SearchController: UIViewController {
         self.mTableView.register(UINib(nibName: cellIdentifier.searchCell, bundle: nil), forCellReuseIdentifier: cellIdentifier.searchCell)
         
 //        
-//        self.mTableView.estimatedRowHeight = 90.0
-//        self.mTableView.rowHeight = UITableView.automaticDimension
+        self.mTableView.estimatedRowHeight = 90.0
+        self.mTableView.rowHeight = UITableView.automaticDimension
 
         // Do any additional setup after loading the view.
     }
@@ -58,10 +58,10 @@ extension SearchController: UITableViewDataSource, UITableViewDelegate {
         return self.products.count
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90.0
-    }
-//    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 90.0
+//    }
+////    
     
     
     
@@ -93,9 +93,10 @@ extension SearchController: UITableViewDataSource, UITableViewDelegate {
             SearchCell {
             cell = mcell
             
-        }else{
-            cell = Bundle.main.loadNibNamed(cellIdentifier.searchCell, owner: nil)?.first as! SearchCell
         }
+//        else{
+//            cell = Bundle.main.loadNibNamed(cellIdentifier.searchCell, owner: nil)?.first as! SearchCell
+//        }
         
         //cell.accessoryType = .disclosureIndicator
         
@@ -113,6 +114,10 @@ extension SearchController: UITableViewDataSource, UITableViewDelegate {
             cell.stockLabel.textColor = UIColor.gray
             
         }
+        
+        let image = UIImage(systemName: "soccerball")?.withRenderingMode(.alwaysTemplate)
+        cell.productImage.image = image
+        cell.productImage.tintColor = .brown
         
         return cell
         
