@@ -10,6 +10,8 @@
 		8C667DDF2B564DC20014F74C /* ProductsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C667DDE2B564DC20014F74C /* ProductsController.swift */; };
 		8C667DE12B567CAA0014F74C /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C667DE02B567CAA0014F74C /* ProfileController.swift */; };
 		8C91552F2B53DF700078EBE3 /* UIVIewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C91552E2B53DF6F0078EBE3 /* UIVIewExtension.swift */; };
+		8CABBA382B5E35D90043C845 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABBA362B5E35D90043C845 /* SearchCell.swift */; };
+		8CABBA392B5E35D90043C845 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CABBA372B5E35D90043C845 /* SearchCell.xib */; };
 		8CE0ABCD2B529544005485C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0ABCC2B529544005485C6 /* Constants.swift */; };
 		8CE0ABCF2B52A600005485C6 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0ABCE2B52A600005485C6 /* LoginController.swift */; };
 		8CEAFA5B2B4E49C8005C0E85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEAFA5A2B4E49C8005C0E85 /* AppDelegate.swift */; };
@@ -19,8 +21,6 @@
 		8CEAFA642B4E49C8005C0E85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CEAFA632B4E49C8005C0E85 /* Assets.xcassets */; };
 		8CEAFA672B4E49C8005C0E85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CEAFA652B4E49C8005C0E85 /* LaunchScreen.storyboard */; };
 		8CEB897C2B57D901001A2962 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEB897B2B57D901001A2962 /* Product.swift */; };
-		8CEB897F2B57E5D5001A2962 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEB897D2B57E5D5001A2962 /* SearchCell.swift */; };
-		8CEB89802B57E5D5001A2962 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CEB897E2B57E5D5001A2962 /* SearchCell.xib */; };
 		8CF218F32B55314A009E1B1A /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF218F22B55314A009E1B1A /* SignUpController.swift */; };
 		8CF218F52B554896009E1B1A /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF218F42B554896009E1B1A /* CategoryController.swift */; };
 		8CF218F72B5548D0009E1B1A /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF218F62B5548D0009E1B1A /* SearchController.swift */; };
@@ -36,6 +36,8 @@
 		8C667DDE2B564DC20014F74C /* ProductsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsController.swift; sourceTree = "<group>"; };
 		8C667DE02B567CAA0014F74C /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		8C91552E2B53DF6F0078EBE3 /* UIVIewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVIewExtension.swift; sourceTree = "<group>"; };
+		8CABBA362B5E35D90043C845 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		8CABBA372B5E35D90043C845 /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 		8CE0ABCC2B529544005485C6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8CE0ABCE2B52A600005485C6 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		8CEAFA572B4E49C8005C0E85 /* test_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,8 +49,6 @@
 		8CEAFA662B4E49C8005C0E85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CEAFA682B4E49C8005C0E85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CEB897B2B57D901001A2962 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		8CEB897D2B57E5D5001A2962 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
-		8CEB897E2B57E5D5001A2962 /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 		8CF218F22B55314A009E1B1A /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpController.swift; path = test_app/ViewController/SignUpController.swift; sourceTree = SOURCE_ROOT; };
 		8CF218F42B554896009E1B1A /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
 		8CF218F62B5548D0009E1B1A /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
@@ -130,8 +130,8 @@
 		8C91552A2B53BCB60078EBE3 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				8CEB897D2B57E5D5001A2962 /* SearchCell.swift */,
-				8CEB897E2B57E5D5001A2962 /* SearchCell.xib */,
+				8CABBA362B5E35D90043C845 /* SearchCell.swift */,
+				8CABBA372B5E35D90043C845 /* SearchCell.xib */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -263,7 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CEAFA672B4E49C8005C0E85 /* LaunchScreen.storyboard in Resources */,
-				8CEB89802B57E5D5001A2962 /* SearchCell.xib in Resources */,
+				8CABBA392B5E35D90043C845 /* SearchCell.xib in Resources */,
 				8CEAFA642B4E49C8005C0E85 /* Assets.xcassets in Resources */,
 				8CEAFA622B4E49C8005C0E85 /* Main.storyboard in Resources */,
 			);
@@ -319,7 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C91552F2B53DF700078EBE3 /* UIVIewExtension.swift in Sources */,
-				8CEB897F2B57E5D5001A2962 /* SearchCell.swift in Sources */,
+				8CABBA382B5E35D90043C845 /* SearchCell.swift in Sources */,
 				8CF218F32B55314A009E1B1A /* SignUpController.swift in Sources */,
 				8CEAFA5F2B4E49C8005C0E85 /* SplashController.swift in Sources */,
 				8CEAFA5B2B4E49C8005C0E85 /* AppDelegate.swift in Sources */,

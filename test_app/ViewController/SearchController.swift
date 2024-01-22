@@ -36,9 +36,9 @@ class SearchController: UIViewController {
         
         self.mTableView.register(UINib(nibName: cellIdentifier.searchCell, bundle: nil), forCellReuseIdentifier: cellIdentifier.searchCell)
         
-        
-        self.mTableView.estimatedRowHeight = 90.0
-        self.mTableView.rowHeight = UITableView.automaticDimension
+//        
+//        self.mTableView.estimatedRowHeight = 90.0
+//        self.mTableView.rowHeight = UITableView.automaticDimension
 
         // Do any additional setup after loading the view.
     }
@@ -58,9 +58,9 @@ extension SearchController: UITableViewDataSource, UITableViewDelegate {
         return self.products.count
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 90.0
-//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90.0
+    }
 //    
     
     

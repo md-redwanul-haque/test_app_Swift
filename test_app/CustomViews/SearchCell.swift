@@ -2,9 +2,8 @@
 //  SearchCell.swift
 //  test_app
 //
-//  Created by Redwan on 17/1/24.
+//  Created by Redwan on 22/1/24.
 //
-
 import UIKit
 
 class SearchCell: UITableViewCell {
