@@ -96,9 +96,10 @@ extension SearchController: UITableViewDataSource, UITableViewDelegate {
             cell = mcell
             
         }
-//        else{
-//            cell = Bundle.main.loadNibNamed(cellIdentifier.searchCell, owner: nil)?.first as! SearchCell
-//        }
+        //  else{
+        //    cell = Bundle.main.loadNibNamed(cellIdentifier.searchCell,
+        // owner: nil)?.first as! SearchCell
+        // }
         
         //cell.accessoryType = .disclosureIndicator
         
@@ -122,6 +123,9 @@ extension SearchController: UITableViewDataSource, UITableViewDelegate {
         cell.productImage.tintColor = .brown
         
         return cell
+        
+        
+   
         
         
         

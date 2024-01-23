@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -103,34 +104,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J52-QW-Q4X">
-                                <rect key="frame" x="50" y="405" width="300" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="f46-sV-NyO"/>
-                                    <constraint firstAttribute="width" constant="300" id="fUQ-2f-jOM"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="See all Products">
-                                    <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="acd-8Z-YaG" kind="show" id="fGT-y9-3DI"/>
-                                </connections>
-                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bLr-Ir-Mgg">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TUb-Lf-xSs">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="q3a-zU-yXJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6Cq-2E-BkQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0UN-jz-9Wg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="J52-QW-Q4X" firstAttribute="centerX" secondItem="2v5-Sk-saA" secondAttribute="centerX" id="ByA-JP-foJ"/>
-                            <constraint firstItem="J52-QW-Q4X" firstAttribute="top" secondItem="2v5-Sk-saA" secondAttribute="topMargin" constant="302" id="Ja3-dm-SDi"/>
-                            <constraint firstItem="J52-QW-Q4X" firstAttribute="centerX" secondItem="2v5-Sk-saA" secondAttribute="centerX" id="bvn-GG-BdI"/>
-                            <constraint firstItem="0UN-jz-9Wg" firstAttribute="trailing" secondItem="J52-QW-Q4X" secondAttribute="trailing" constant="50" id="d49-F0-FWy"/>
-                            <constraint firstItem="J52-QW-Q4X" firstAttribute="leading" secondItem="0UN-jz-9Wg" secondAttribute="leading" constant="50" id="hpC-D0-ybw"/>
-                            <constraint firstItem="J52-QW-Q4X" firstAttribute="centerX" secondItem="2v5-Sk-saA" secondAttribute="centerX" id="lWT-R2-xJ7"/>
-                            <constraint firstItem="J52-QW-Q4X" firstAttribute="centerX" secondItem="2v5-Sk-saA" secondAttribute="centerX" id="yHn-aA-Kja"/>
+                            <constraint firstItem="0UN-jz-9Wg" firstAttribute="trailing" secondItem="bLr-Ir-Mgg" secondAttribute="trailing" id="5cQ-Pr-abj"/>
+                            <constraint firstItem="0UN-jz-9Wg" firstAttribute="bottom" secondItem="bLr-Ir-Mgg" secondAttribute="bottom" id="MzY-WR-A3v"/>
+                            <constraint firstItem="bLr-Ir-Mgg" firstAttribute="top" secondItem="0UN-jz-9Wg" secondAttribute="top" id="ah9-by-fF1"/>
+                            <constraint firstItem="bLr-Ir-Mgg" firstAttribute="leading" secondItem="0UN-jz-9Wg" secondAttribute="leading" id="wPN-f7-0TQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Gn2-gw-3vD"/>
+                    <connections>
+                        <outlet property="mCollectionVIew" destination="bLr-Ir-Mgg" id="AhE-M4-oy3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WTx-Qd-8Er" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -621,10 +628,10 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemCyanColor">
-            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

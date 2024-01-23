@@ -8,16 +8,93 @@
 import UIKit
 
 class CategoryController: UIViewController {
+    
+    @IBOutlet weak var mCollectionVIew: UICollectionView!
+    
+    let products : [DisplayProduct] = [
+        
+        DisplayProduct(
+            id: 001,
+            name: "Cricket Bat",
+            description: "High Quality Cricket Bat Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            discountPrice: 200,
+            originalPrice: 50,
+            addedCount: 0
+        ),
+        DisplayProduct(
+            id: 002,
+            name: "FootBall",
+            description: "High Quality FootBall",
+            discountPrice: 200,
+            originalPrice: 50,
+            addedCount: 0
+        ),
+        DisplayProduct(
+            id: 003,
+            name: "Tennis Ball",
+            description: "High  Quality Tennis Ball",
+            discountPrice: 200,
+            originalPrice: 50,
+            addedCount: 0
+        ),
+        DisplayProduct(
+            id: 004,
+            name: "Hockey Stick",
+            description: "High Quality Hockey  StickLorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            discountPrice: 200,
+            originalPrice: 50,
+            addedCount: 0
+        ),
+        DisplayProduct(
+            id: 005,
+            name: "Adidas Shoe",
+            description: "High Quality Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Shoe",
+            discountPrice: 100,
+            originalPrice: 50.0,
+            addedCount: 0
+        ),
+        
+        
+    ]
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.title = "Browse Product"
+        
+        self.mCollectionVIew.delegate = self
+        self.mCollectionVIew.dataSource = self
+        
+    }
+}
 
-        // Do any additional setup after loading the view.
+extension CategoryController: UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if section == 0 {
+            return 0
+        }else{
+            return self.products.count
+        }
+    }
+    
+    
+}
+extension CategoryController: UICollectionViewDelegate {
+    
+    
+}
 
-
-
+extension CategoryController: UICollectionViewDelegateFlowLayout {
+    
+    
+    
+    
+    
 }

@@ -26,6 +26,9 @@
 		8CF218F72B5548D0009E1B1A /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF218F62B5548D0009E1B1A /* SearchController.swift */; };
 		8CF218F92B55490A009E1B1A /* OrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF218F82B55490A009E1B1A /* OrderController.swift */; };
 		8CF218FB2B554953009E1B1A /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF218FA2B554953009E1B1A /* SettingsController.swift */; };
+		8CF46AAC2B5FBDEA0027562A /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF46AAA2B5FBDEA0027562A /* ProductCell.swift */; };
+		8CF46AAD2B5FBDEA0027562A /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CF46AAB2B5FBDEA0027562A /* ProductCell.xib */; };
+		8CF46AAF2B5FCB7C0027562A /* displayProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF46AAE2B5FCB7C0027562A /* displayProduct.swift */; };
 		E067EBE9081CA770269CAAF1 /* libPods-test_app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42869B70EBE42F0CCCF59091 /* libPods-test_app.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +57,9 @@
 		8CF218F62B5548D0009E1B1A /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		8CF218F82B55490A009E1B1A /* OrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderController.swift; sourceTree = "<group>"; };
 		8CF218FA2B554953009E1B1A /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		8CF46AAA2B5FBDEA0027562A /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		8CF46AAB2B5FBDEA0027562A /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		8CF46AAE2B5FCB7C0027562A /* displayProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = displayProduct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,8 @@
 			children = (
 				8CABBA362B5E35D90043C845 /* SearchCell.swift */,
 				8CABBA372B5E35D90043C845 /* SearchCell.xib */,
+				8CF46AAA2B5FBDEA0027562A /* ProductCell.swift */,
+				8CF46AAB2B5FBDEA0027562A /* ProductCell.xib */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -198,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				8CEB897B2B57D901001A2962 /* Product.swift */,
+				8CF46AAE2B5FCB7C0027562A /* displayProduct.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -264,6 +273,7 @@
 			files = (
 				8CEAFA672B4E49C8005C0E85 /* LaunchScreen.storyboard in Resources */,
 				8CABBA392B5E35D90043C845 /* SearchCell.xib in Resources */,
+				8CF46AAD2B5FBDEA0027562A /* ProductCell.xib in Resources */,
 				8CEAFA642B4E49C8005C0E85 /* Assets.xcassets in Resources */,
 				8CEAFA622B4E49C8005C0E85 /* Main.storyboard in Resources */,
 			);
@@ -324,6 +334,7 @@
 				8CEAFA5F2B4E49C8005C0E85 /* SplashController.swift in Sources */,
 				8CEAFA5B2B4E49C8005C0E85 /* AppDelegate.swift in Sources */,
 				8CEAFA5D2B4E49C8005C0E85 /* SceneDelegate.swift in Sources */,
+				8CF46AAF2B5FCB7C0027562A /* displayProduct.swift in Sources */,
 				8C667DE12B567CAA0014F74C /* ProfileController.swift in Sources */,
 				8CF218FB2B554953009E1B1A /* SettingsController.swift in Sources */,
 				8CF218F52B554896009E1B1A /* CategoryController.swift in Sources */,
@@ -331,6 +342,7 @@
 				8CE0ABCF2B52A600005485C6 /* LoginController.swift in Sources */,
 				8CF218F72B5548D0009E1B1A /* SearchController.swift in Sources */,
 				8CE0ABCD2B529544005485C6 /* Constants.swift in Sources */,
+				8CF46AAC2B5FBDEA0027562A /* ProductCell.swift in Sources */,
 				8C667DDF2B564DC20014F74C /* ProductsController.swift in Sources */,
 				8CEB897C2B57D901001A2962 /* Product.swift in Sources */,
 			);
