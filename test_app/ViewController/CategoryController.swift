@@ -94,11 +94,6 @@ extension CategoryController: UICollectionViewDataSource {
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSizeMake(160.0, 263.0)
-    }
-    
-    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let section = indexPath.section
@@ -109,6 +104,10 @@ extension CategoryController: UICollectionViewDataSource {
         }else{
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier.productCell, for: indexPath) as! ProductCell
+            
+            let product = self.products[row]
+            cell.setProductInformation(product: product)
+            
             return cell
             
         }
@@ -118,6 +117,24 @@ extension CategoryController: UICollectionViewDataSource {
     
     
 }
+
+extension CategoryController{
+    
+    func sizeForItem() -> CGSize {
+        let screenWidth = self.view.frame.width
+        let spacingBetweenItems = 10.0
+        let spacingAtEdges = 10.0
+        let numberOfItemsInEachRow = 2
+        let totalSpacing = (spacingAtEdges * 2) + (Double((numberOfItemsInEachRow-1)) * spacingBetweenItems)
+        let itemWidth = (screenWidth - totalSpacing) / 2
+        
+        
+        return CGSize(width: itemWidth, height: 265.0)
+    }
+    
+    
+}
+
 extension CategoryController: UICollectionViewDelegate {
     
     
@@ -125,7 +142,13 @@ extension CategoryController: UICollectionViewDelegate {
 
 extension CategoryController: UICollectionViewDelegateFlowLayout {
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return sizeForItem()
+    }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0.0, left: 10.0, bottom: 10.0, right: 10.0)
+    }
     
     
     
