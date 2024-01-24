@@ -57,15 +57,24 @@ class CategoryController: UIViewController {
         
     ]
     
+   
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.title = "Browse Product"
+      
         
         self.mCollectionVIew.delegate = self
         self.mCollectionVIew.dataSource = self
+        
+        self.mCollectionVIew.setCollectionViewLayout(UICollectionViewFlowLayout.init(), animated: true)
+        
+        let productNib = UINib(nibName: cellIdentifier.productCell, bundle: nil)
+        
+        self.mCollectionVIew.register(productNib, forCellWithReuseIdentifier: cellIdentifier.productCell)
+        
         
     }
 }
@@ -83,6 +92,29 @@ extension CategoryController: UICollectionViewDataSource {
             return self.products.count
         }
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSizeMake(160.0, 263.0)
+    }
+    
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let section = indexPath.section
+        let row = indexPath.row
+        if section == 0 {
+            return UICollectionViewCell(frame: .zero)
+            
+        }else{
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier.productCell, for: indexPath) as! ProductCell
+            return cell
+            
+        }
+    }
+    
+
     
     
 }
