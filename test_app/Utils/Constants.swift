@@ -23,6 +23,8 @@ class Constants {
 class cellIdentifier{
     public static let searchCell  = "SearchCell"
     public static let productCell  = "ProductCell"
+    public static let categoryHolderCell  = "CategoryHolderCell"
+    public static let collectionSectionHeaderView  = "CollectionSectionHeaderView"
     
     
     
