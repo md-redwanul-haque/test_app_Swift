@@ -115,8 +115,11 @@ extension CategoryController: UICollectionViewDataSource {
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier.productCell, for: indexPath) as! ProductCell
             
+            
+            cell.contentView.applyCorner(cornerRadious: 20.0, borWidth: 0.0)
             let product = self.products[row]
             cell.setProductInformation(product: product)
+            
             
             return cell
             
@@ -157,14 +160,14 @@ extension CategoryController: UICollectionViewDelegateFlowLayout {
         let section = indexPath.section
         if section == 0 {
             
-            return CGSize(width: self.view.frame.width, height: 120.0)
+            return CGSize(width: self.view.frame.width, height: 140.0)
         }
         
         return sizeForItem()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0.0, left: 10.0, bottom: 10.0, right: 10.0)
+        return UIEdgeInsets(top: 6.0, left: 10.0, bottom: 6.0, right: 10.0)
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -180,7 +183,7 @@ extension CategoryController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-         return CGSize(width: self.view.frame.width, height: 60.0)
+         return CGSize(width: self.view.frame.width, height: 40.0)
     }
     
     
