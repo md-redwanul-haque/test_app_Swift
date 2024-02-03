@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,24 +19,26 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYk-aA-TNQ">
                         <rect key="frame" x="0.0" y="0.0" width="86" height="70"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhk-tq-lvT">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rao-eE-HMo">
                                 <rect key="frame" x="0.0" y="0.0" width="86" height="70"/>
-                                <color key="backgroundColor" red="0.8862745098" green="0.94901960780000005" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiF-45-Eeh">
+                                <rect key="frame" x="5" y="5" width="76" height="60"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.92817778080000002" green="0.98823529409999999" blue="0.92703444020000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Zhk-tq-lvT" firstAttribute="leading" secondItem="FYk-aA-TNQ" secondAttribute="leading" id="8V4-Au-qz4"/>
-                            <constraint firstAttribute="bottom" secondItem="Zhk-tq-lvT" secondAttribute="bottom" id="OU8-Nb-fYM"/>
-                            <constraint firstItem="Zhk-tq-lvT" firstAttribute="top" secondItem="FYk-aA-TNQ" secondAttribute="top" id="VVE-eY-vTt"/>
-                            <constraint firstItem="Zhk-tq-lvT" firstAttribute="top" secondItem="FYk-aA-TNQ" secondAttribute="top" id="b65-hT-btl"/>
-                            <constraint firstAttribute="bottom" secondItem="Zhk-tq-lvT" secondAttribute="bottom" id="hs5-Nd-Ovd"/>
-                            <constraint firstAttribute="trailing" secondItem="Zhk-tq-lvT" secondAttribute="trailing" id="qzj-91-ajY"/>
-                            <constraint firstItem="Zhk-tq-lvT" firstAttribute="leading" secondItem="FYk-aA-TNQ" secondAttribute="leading" id="vJE-E6-T6c"/>
-                            <constraint firstAttribute="trailing" secondItem="Zhk-tq-lvT" secondAttribute="trailing" id="x4A-BI-Kyd"/>
+                            <constraint firstAttribute="trailing" secondItem="hiF-45-Eeh" secondAttribute="trailing" constant="5" id="35L-0V-iK7"/>
+                            <constraint firstAttribute="bottom" secondItem="hiF-45-Eeh" secondAttribute="bottom" constant="5" id="PeN-ER-nBe"/>
+                            <constraint firstItem="hiF-45-Eeh" firstAttribute="top" secondItem="FYk-aA-TNQ" secondAttribute="top" constant="5" id="W3n-AX-zV8"/>
+                            <constraint firstItem="Rao-eE-HMo" firstAttribute="top" secondItem="FYk-aA-TNQ" secondAttribute="top" id="YHv-kT-EwF"/>
+                            <constraint firstItem="Rao-eE-HMo" firstAttribute="leading" secondItem="FYk-aA-TNQ" secondAttribute="leading" id="ezx-Vm-61A"/>
+                            <constraint firstAttribute="bottom" secondItem="Rao-eE-HMo" secondAttribute="bottom" id="hXj-q6-cK5"/>
+                            <constraint firstAttribute="trailing" secondItem="Rao-eE-HMo" secondAttribute="trailing" id="ll7-B1-iYB"/>
+                            <constraint firstItem="hiF-45-Eeh" firstAttribute="leading" secondItem="FYk-aA-TNQ" secondAttribute="leading" constant="5" id="uv0-N3-PQ8"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -51,14 +52,10 @@
             </constraints>
             <size key="customSize" width="86" height="70"/>
             <connections>
-                <outlet property="nameLabel" destination="Zhk-tq-lvT" id="jNE-9c-a5r"/>
+                <outlet property="CategoryImageView" destination="Rao-eE-HMo" id="ttV-Cn-jX4"/>
+                <outlet property="nameLabel" destination="hiF-45-Eeh" id="lpp-di-BIq"/>
             </connections>
             <point key="canvasLocation" x="119.08396946564885" y="-4.2253521126760569"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

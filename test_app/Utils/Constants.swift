@@ -20,13 +20,21 @@ class Constants {
     
 }
 
-class cellIdentifier{
+class CellIdentifier{
     public static let searchCell  = "SearchCell"
     public static let productCell  = "ProductCell"
     public static let categoryHolderCell  = "CategoryHolderCell"
     public static let categoryCell  = "CategoryCell"
     public static let collectionSectionHeaderView  = "CollectionSectionHeaderView"
+
     
+}
+
+
+class RestClient {
+    
+    public static let baseUrl = "https://api.escuelajs.co"
+    public static let categoriyUrl = "/api/v1/categories"
     
     
     

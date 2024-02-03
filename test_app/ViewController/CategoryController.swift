@@ -6,10 +6,15 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+
 
 class CategoryController: UIViewController {
     
     @IBOutlet weak var mCollectionVIew: UICollectionView!
+    
+    var categoryCollectionList : [JSON] = []
     
     let products : [DisplayProduct] = [
         
@@ -71,17 +76,20 @@ class CategoryController: UIViewController {
         
         self.mCollectionVIew.setCollectionViewLayout(UICollectionViewFlowLayout.init(), animated: true)
         //for column wise data section 2
-        let productNib = UINib(nibName: cellIdentifier.productCell, bundle: nil)
+        let productNib = UINib(nibName: CellIdentifier.productCell, bundle: nil)
         
-        self.mCollectionVIew.register(productNib, forCellWithReuseIdentifier: cellIdentifier.productCell)
+        self.mCollectionVIew.register(productNib, forCellWithReuseIdentifier: CellIdentifier.productCell)
         
         // for row wise data in section 1
-        let categoryHolderNIb = UINib(nibName: cellIdentifier.categoryHolderCell, bundle: nil)
-        self.mCollectionVIew.register(categoryHolderNIb, forCellWithReuseIdentifier: cellIdentifier.categoryHolderCell)
+        let categoryHolderNIb = UINib(nibName: CellIdentifier.categoryHolderCell, bundle: nil)
+        self.mCollectionVIew.register(categoryHolderNIb, forCellWithReuseIdentifier: CellIdentifier.categoryHolderCell)
         
         //for header title
-        let sectionHeaderNIb = UINib(nibName: cellIdentifier.collectionSectionHeaderView, bundle: nil)
-        self.mCollectionVIew.register(sectionHeaderNIb, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: cellIdentifier.collectionSectionHeaderView)
+        let sectionHeaderNIb = UINib(nibName: CellIdentifier.collectionSectionHeaderView, bundle: nil)
+        self.mCollectionVIew.register(sectionHeaderNIb, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CellIdentifier.collectionSectionHeaderView)
+        
+        
+        self.fetchProductCategories()
         
     }
 }
@@ -107,13 +115,19 @@ extension CategoryController: UICollectionViewDataSource {
         let row = indexPath.row
         if section == 0 {
             
-            let categoryHolderCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier.categoryHolderCell, for: indexPath) as! CategoryHolderCell
+            let categoryHolderCell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifier.categoryHolderCell, for: indexPath) as! CategoryHolderCell
             
+            
+            categoryHolderCell.setCategoriesReload(category: self.categoryCollectionList)
+            
+            categoryHolderCell.categories = self.categoryCollectionList
+            
+          
             return categoryHolderCell
             
         }else{
             
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier.productCell, for: indexPath) as! ProductCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifier.productCell, for: indexPath) as! ProductCell
             
             
             cell.contentView.applyCorner(cornerRadious: 20.0, borWidth: 0.0)
@@ -171,7 +185,7 @@ extension CategoryController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = mCollectionVIew.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: cellIdentifier.collectionSectionHeaderView, for: indexPath) as! CollectionSectionHeaderView
+        let header = mCollectionVIew.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CellIdentifier.collectionSectionHeaderView, for: indexPath) as! CollectionSectionHeaderView
         
         if indexPath.section == 0 {
             header.headerTitleLabel.text = "Product Category"
@@ -184,6 +198,57 @@ extension CategoryController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
          return CGSize(width: self.view.frame.width, height: 40.0)
+    }
+    
+    
+    
+}
+
+extension CategoryController{
+    
+    func fetchProductCategories() {
+        
+        let url = RestClient.baseUrl + RestClient.categoriyUrl
+        
+        AF.request(url).responseData{
+            
+            response in debugPrint(response)
+            switch (response.result){
+                
+            case .success:
+                print("validation Successful")
+                
+                if let responseData = response.value {
+                    do {
+                        
+                        let json = try JSON (data: responseData)
+                    
+                        if let dataList = json.array{
+                            self.categoryCollectionList = dataList
+                            
+                            self.mCollectionVIew.reloadData()
+                        }
+                        print("dataList -> \(self.categoryCollectionList)")
+                        
+                    } catch let error {
+                        print(error)
+                        
+                    }
+                    
+                }
+                
+                
+            case let .failure(error): print(error)
+                
+                
+            }
+            
+            
+        }
+        
+        
+        
+        
     }
     
     

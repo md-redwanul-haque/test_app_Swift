@@ -34,7 +34,7 @@ class SearchController: UIViewController {
         self.mTableView.dataSource = self
         self.mTableView.delegate = self 
         
-        self.mTableView.register(UINib(nibName: cellIdentifier.searchCell, bundle: nil), forCellReuseIdentifier: cellIdentifier.searchCell)
+        self.mTableView.register(UINib(nibName: CellIdentifier.searchCell, bundle: nil), forCellReuseIdentifier: CellIdentifier.searchCell)
         
 //        
         self.mTableView.estimatedRowHeight = 90.0
@@ -91,7 +91,7 @@ extension SearchController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         var cell: SearchCell!
-        if let mcell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier.searchCell) as?
+        if let mcell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.searchCell) as?
             SearchCell {
             cell = mcell
             
