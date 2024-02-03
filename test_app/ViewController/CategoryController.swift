@@ -167,7 +167,7 @@ extension CategoryController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 6.0, left: 10.0, bottom: 6.0, right: 10.0)
+        return UIEdgeInsets(top: 0.0, left: 10.0, bottom: 0.0, right: 10.0)
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
