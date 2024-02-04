@@ -66,8 +66,26 @@ class LoginController: UIViewController {
        
     }
     
+    func validateLoginInfo() -> Bool {
+        
+        guard let email = self.userNameField.text, email.isValidEmail() else {
+            self.displayAlert(title: "Email is invalid", message: "Please Enter a valid Email")
+            return false
+        }
+        
+        
+        guard let password = self.passWordField.text, password.isvaliddPassword() else {
+            
+            self.displayAlert(title: "Password too Short", message: "Password must be at least 5 character long")
+            
+            
+        }
+        
+        return true
+        
+    }
     
-    func Login (){
+    func Login (email: String , password : String){
         
         
         

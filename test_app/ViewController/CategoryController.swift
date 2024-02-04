@@ -222,7 +222,7 @@ extension CategoryController{
                     do {
                         
                         let json = try JSON (data: responseData)
-                    
+                        
                         if let dataList = json.array{
                             self.categoryCollectionList = dataList
                             

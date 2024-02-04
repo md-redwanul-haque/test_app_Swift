@@ -34,7 +34,8 @@ class SearchController: UIViewController {
         self.mTableView.dataSource = self
         self.mTableView.delegate = self 
         
-        self.mTableView.register(UINib(nibName: CellIdentifier.searchCell, bundle: nil), forCellReuseIdentifier: CellIdentifier.searchCell)
+        self.mTableView.register(UINib(nibName: CellIdentifier.searchCell, bundle: nil), 
+                                 forCellReuseIdentifier: CellIdentifier.searchCell)
         
 //        
         self.mTableView.estimatedRowHeight = 90.0

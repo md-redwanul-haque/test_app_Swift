@@ -35,8 +35,8 @@ class RestClient {
     
     public static let baseUrl = "https://api.escuelajs.co"
     public static let categoriyUrl = "/api/v1/categories"
-    
-    
-    
+    public static let loginUrl = "api/v1/auth/login"
     
 }
+
+
